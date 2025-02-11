@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+
+:root {
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --gd-text: hsl(167, 40%, 24%);
+  --photo-text: hsl(198, 62%, 26%);
+  --footer: hsl(168, 34%, 41%);
+  --dark-blue: hsl(212, 27%, 19%);
+  --hover: #78cef6;
+  --very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --grayish-blue: hsl(210, 4%, 67%);
+  --white: hsl(0, 0%, 100%);
+
+  /* FONT STYLES */
+  --ff-barlow: 'Barlow', serif;
+  --ff-fraunces: 'Fraunces', serif;
+  --fw-barlow-600: 600;
+  --fw-fraunces-700: 700;
+  --fw-fraunces-900: 900;
+}
+
+body {
+  font-family: var(--ff-barlow);
+  font-size: 18px;
+  font-weight: var(--fw-barlow-600);
+
+  box-sizing: border-box;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* GLOBAL STYLES */
+
+@media screen and (min-width: 320px) {
+  main section {
+    background: url('/app/images/mobile/image-header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+  .main__container {
+    /* border: 1px solid aqua; */
+    padding: 35px 25px;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar__logo img {
+    width: 100px;
+  }
+
+  .navbar__link-hamburger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--white);
+    /* padding: 10px; */
+    border-radius: 4px;
+    width: 40px;
+  }
+
+  .navbar__link-hamburger span {
+    display: block;
+    height: 2px;
+    width: 30px;
+    background-color: var(--grayish-blue);
+    margin: 3px 0;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 576px) {
+}
+
+@media screen and (min-width: 992px) {
+  main section {
+    background: url('/app/images/desktop/image-header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar__logo img {
+    width: 200px;
+  }
+
+  .navbar__links.desktop {
+    opacity: 1;
+    width: 50%;
+  }
+
+  .navbar__links.navbar__links.desktop ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+  }
+
+  .navbar__links.navbar__links.desktop ul li:last-child {
+    color: var(--dark-blue);
+    font-family: var(--ff-fraunces);
+    font-weight: var(--fw-fraunces-700);
+    background-color: var(--white);
+    padding: 12px 22px;
+    border-radius: 24px;
+  }
+
+  .navbar__links.navbar__links.desktop ul li:last-child:hover {
+    background-color: var(--hover);
+    /* opacity: 0.3; */
+    color: var(--white);
+    transition: 300ms ease-in-out;
+    cursor: pointer;
+  }
+
+  .mobile {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+}
